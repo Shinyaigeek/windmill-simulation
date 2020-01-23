@@ -1,4 +1,5 @@
 export const calcAverage = () => {
+    console.log(7.0 * Math.sqrt(2 / Math.PI))
     return 7.0 * Math.sqrt(2 / Math.PI);
 }
 
