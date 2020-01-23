@@ -7,7 +7,7 @@ import {
 } from "../script/rayleigh_distribution";
 import { getGeneratedElectric } from "../script/getGeneratedElectric";
 
-const Vs = Array(101)
+const Vs = Array(181)
   .fill(1)
   .map((_, index) => {
     return index / 4;
