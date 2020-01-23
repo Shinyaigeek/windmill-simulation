@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Line } from "react-chartjs-2";
 import {
@@ -14,6 +14,7 @@ const Vs = Array(181)
   });
 
 export default function ChartRayleigh() {
+  const [av, setAv] = useState(7.0)
   return (
     <div>
       <Line
@@ -24,7 +25,7 @@ export default function ChartRayleigh() {
               label: "風速の分布",
               yAxisID: "distribution",
               data: Vs.map(content => {
-                return calcRayleighDistribution(content, calcAverage());
+                return calcRayleighDistribution(content, calcAverage(av));
               }),
               backgroundColor: "#ffddcc",
               borderColor: "#ff9966",
@@ -59,6 +60,7 @@ export default function ChartRayleigh() {
           }
         }}
       />
+      <input type="number" value={av} onChange={(e) => setAv(parseInt(e.target.value))} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
-export const calcAverage = () => {
-    console.log(7.0 * Math.sqrt(2 / Math.PI))
-    return 7.0 * Math.sqrt(2 / Math.PI);
+export const calcAverage = (av:number) => {
+    return av * Math.sqrt(2 / Math.PI);
 }
 
 export const calcRayleighDistribution = (v:number,aveV:number) => {
